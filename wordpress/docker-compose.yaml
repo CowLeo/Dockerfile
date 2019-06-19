@@ -28,8 +28,8 @@ services:
         environment:
             - WORDPRESS_DB_HOST=mysql
             - WORDPRESS_DB_USER=root
-            - WORDPRESS_DB_PASSWORD=root
-            - WORDPRESS_DB_NAME=xbclub
+            - WORDPRESS_DB_PASSWORD=wordpress
+            - WORDPRESS_DB_NAME=wordpress
             - WORDPRESS_TABLE_PREFIX=wp_
         volumes:
             - ./www:/var/www/html:rw
@@ -50,7 +50,7 @@ services:
                 aliases:
                     - mysql
         environment:
-            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_ROOT_PASSWORD=wordpress
         volumes:
             - ./mysql:/var/lib/mysql
             - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
